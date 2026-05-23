@@ -556,3 +556,9 @@ exit 0
 ### plugin-dev 的 /plugin-dev:create-plugin 值得体验
 
 plugin-dev 提供了一个 8 阶段的插件创建工作流（Discovery → Component Planning → Detailed Design → Structure Creation → Implementation → Validation → Testing → Documentation）。即使不用它来生成代码，走一遍这个流程也能帮你想清楚插件的设计。
+
+---
+
+> 本附录来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

@@ -143,3 +143,9 @@ Verify my solution to AIME 2024 problem 12
 **LaTeX 编译脚本有一个小问题**。`compile_pdf.sh` 里 `\usepackage{enumitem}` 被加载了两次（一次带 `[shortlabels]` 选项，一次不带），某些 LaTeX 版本会报 option clash 警告。不影响编译成功，但日志里会有噪音。
 
 **触发条件可能误判**。`evals/trigger_eval.json` 列出了触发评估数据。像"Explain the proof of the fundamental theorem of calculus to a high schooler"这种不应该触发但包含"proof"关键词的 query，理论上不该触发，但实际行为取决于 Claude 的判断。如果你只是想聊聊数学而不是解竞赛题，可能会意外触发整套工作流。
+
+---
+
+> 本章来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

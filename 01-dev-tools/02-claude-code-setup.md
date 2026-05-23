@@ -84,3 +84,9 @@ claude --plugin-dir /path/to/claude-code-setup
 - 参考文件里的 MCP server 列表不可能实时更新。如果你用的服务（比如某个小众数据库）不在列表里，skill 指令里写了"用 web search 查找"，但 web search 工具不一定可用
 - 大型 monorepo 的分析可能不太准。skill 的检测逻辑比较简单——看根目录有没有某个文件，查依赖列表有没有某个包。子包级别的差异化推荐做不到
 - Notification hooks 的配置示例是 macOS 专用的（`afplay`、`osascript`），Linux 和 Windows 用户需要自己改命令
+
+---
+
+> 本章来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

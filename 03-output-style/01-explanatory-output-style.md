@@ -89,3 +89,9 @@ claude plugin remove explanatory-output-style
 **跟 learning-output-style 冲突**。下一节讲的 `learning-output-style` 插件里包含了完整的 explanatory 功能。两个同时装会导致重复的 insight 指令注入，效果不可预测。选一个装就行。
 
 **不影响工具使用，只影响对话输出**。这个插件不改变 Claude 用什么工具、怎么执行任务，只改变它在对话中怎么说话。代码本身不会被插入 insight 注释——insight 只出现在 Claude 的对话文本里。
+
+---
+
+> 本章来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

@@ -42,3 +42,9 @@ HTTP 类型远程 MCP 服务器，地址 `mcp.supabase.com/mcp`。覆盖 Supabas
 - SQL 查询直接执行在你的 Supabase 数据库上。生产环境务必小心，Claude 的 `DROP TABLE` 是真的会执行的。
 - OAuth 授权的 scope 决定了可操作范围。如果只授了只读权限，写操作会失败。
 - 免费版 Supabase 项目有暂停机制（7 天不活跃自动暂停），暂停状态下 MCP 调用会失败。
+
+---
+
+> 本章来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

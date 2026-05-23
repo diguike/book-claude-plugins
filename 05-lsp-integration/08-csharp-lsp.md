@@ -37,3 +37,9 @@ Unity 项目也能用，但 Unity 的项目结构比较特殊（有自己生成 
 - `dotnet restore` 必须先跑成功。NuGet 包没恢复的话，csharp-ls 找不到依赖的类型定义。
 - 对 source generators（C# 的代码生成机制）的支持有限。如果项目重度依赖 source generators，分析结果可能不完整。
 - 多 target framework 项目（比如同时支持 .NET 6 和 .NET 8），csharp-ls 可能只分析其中一个 target 的代码。
+
+---
+
+> 本章来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

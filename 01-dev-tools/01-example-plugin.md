@@ -100,3 +100,9 @@ claude --plugin-dir /path/to/my-new-plugin
 - 两种格式的 command 同名（都叫 example-command），实际项目里不要这样做，会冲突
 - 这个插件没有 hooks 和 agents 的示例。要看这两类组件的例子，得去 feature-dev 或 plugin-dev 插件
 - Skill 的 `allowed-tools` 字段作用是预授权——这些工具执行时不再弹确认提示。写少了需要频繁点确认，写多了会降低安全性
+
+---
+
+> 本章来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

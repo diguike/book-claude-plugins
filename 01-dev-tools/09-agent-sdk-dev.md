@@ -108,3 +108,9 @@ python main.py
 **文档链接可能过期。** 命令里硬编码了 `docs.claude.com/en/api/agent-sdk/overview` 等 URL。如果 Anthropic 改了文档结构，WebFetch 会失败。这时候 Claude 会降级到用自己的训练数据，但可能不是最新的。
 
 **Verifier Agent 用的是 Sonnet 模型。** 指令里写了 `model: sonnet`，检查精细度不如主对话用的大模型。对于复杂项目，verifier 可能漏掉一些微妙的问题。
+
+---
+
+> 本章来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

@@ -63,3 +63,9 @@ fakechat: http://localhost:8787
 - 单浏览器 tab 设计。开第二个 tab 不会同步消息（WebSocket 连接各自独立，但 deliver 会 broadcast 到所有 tab）。
 - 只绑定 `127.0.0.1`，局域网内其他机器访问不了。这是刻意的——毕竟没有任何认证。
 - HTML/JS 直接内嵌在 `server.ts` 里，一共不到 300 行代码。如果想改 UI 样式，直接改源码。
+
+---
+
+> 本章来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

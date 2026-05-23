@@ -53,3 +53,9 @@ export GITHUB_PERSONAL_ACCESS_TOKEN="ghp_xxxxxxxxxxxx"
 - PAT 的权限范围决定了 Claude 能做什么。如果你只给了 `read` 权限，它建不了 issue。按最小权限原则来。
 - 该服务器由 GitHub Copilot 团队维护，工具列表可能随版本迭代变化。
 - 对私有仓库的操作需要 token 有对应仓库的访问权限。
+
+---
+
+> 本章来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

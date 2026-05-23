@@ -50,3 +50,9 @@ export TFE_TOKEN="your-terraform-cloud-token"
 - 版本锁定在 `0.4.0`，想升级需要手动改 `.mcp.json` 里的镜像 tag。
 - TFE_TOKEN 的权限范围决定了对 Terraform Cloud 的操作能力。建议用 team token 而非 user token，权限更可控。
 - 容器内没有你的本地文件系统访问权限。如果需要分析本地 `.tf` 文件，内容需要通过 Claude 传递过去，而非让 MCP 服务器直接读取。
+
+---
+
+> 本章来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

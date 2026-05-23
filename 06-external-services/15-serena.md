@@ -47,3 +47,9 @@ Oraios 开发的语义级代码分析 MCP 服务器。通过 Language Server Pro
 - 首次启动从 GitHub 安装，需要网络。后续有缓存会快一些。
 - 大型代码库的 LSP 索引建立需要时间和内存。几万行代码的项目还好，百万行级别的可能会慢。
 - 这是一个相对早期的项目，可能存在边界情况处理不完善的问题。
+
+---
+
+> 本章来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

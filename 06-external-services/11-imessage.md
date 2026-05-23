@@ -85,3 +85,9 @@ handle 地址是手机号（带国际区号和 `+`）或 Apple ID 邮箱。
 - 默认会在每条回复末尾追加 `\nSent by Claude` 签名。设 `IMESSAGE_APPEND_SIGNATURE=false` 关闭。
 - `chat.db` 在 macOS 更新后偶尔会变 schema（比如 `text` 列为空改用 `attributedBody`）。插件代码里做了兼容处理，但不排除未来的 macOS 版本再改。
 - 群聊里 iMessage 没有结构化的 @提及。开启群聊时如果用 `requireMention: true`，必须同时配置 `mentionPatterns` 正则，否则没有任何消息能匹配。
+
+---
+
+> 本章来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

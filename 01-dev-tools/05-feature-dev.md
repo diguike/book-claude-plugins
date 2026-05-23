@@ -103,3 +103,9 @@ Claude 会问你想做什么。
 - Phase 4 生成的架构方案质量取决于 Phase 2 的代码探索结果。如果 explorer 没找到相关的代码，architect 设计的方案可能脱离项目实际
 - 三个 agent 都不能执行写操作。所有代码修改都由主会话的 Claude 完成，subagent 只负责分析和审查
 - 命令里用了 `TodoWrite` 跟踪进度。如果你的 Claude Code 环境不支持 TodoWrite 工具，部分流程会有差异
+
+---
+
+> 本章来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

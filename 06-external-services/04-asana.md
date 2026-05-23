@@ -42,3 +42,9 @@ SSE（Server-Sent Events）类型的远程 MCP 服务器，地址 `mcp.asana.com
 - SSE 连接需要持续的网络通道，网络不稳定时可能断连。
 - Asana 的免费版和付费版功能不同，部分高级功能（自定义字段、Timeline 等）可能在免费版不可用。
 - 操作权限取决于你在 Asana workspace 中的角色。
+
+---
+
+> 本章来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

@@ -54,3 +54,9 @@ composer require laravel-boost/laravel-boost
 - 插件通过 `php artisan` 运行，必须在 Laravel 项目根目录下才能工作。如果你的工作目录不对，命令会失败。
 - 这是在你的应用环境里执行代码，连的是你配置的数据库。对生产环境的 `.env` 要当心。
 - Composer 包需要和你的 Laravel 版本兼容。具体支持哪些版本请查看包的文档。
+
+---
+
+> 本章来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

@@ -146,3 +146,9 @@ TypeScript 文件里不要留 console.log，用 logger 库。
 **没有严重程度分级。** 只有 warn 和 block 两档。README 里把 severity levels 列在了"Future Enhancements"里。
 
 **正则不匹配多行。** `re.search` 默认不匹配换行符。如果被检查的字段包含多行内容（比如 `new_text`），`.` 不会匹配换行。需要在正则里显式用 `[\s\S]` 或 `(?s)` 标记。
+
+---
+
+> 本章来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

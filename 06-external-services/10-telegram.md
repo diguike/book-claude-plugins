@@ -83,3 +83,9 @@ Telegram 客户端跨平台且通知即时。出门在外通过手机给 bot 发
 - 没有消息历史回看能力。这是 Telegram Bot API 的硬限制，不是插件的问题。
 - 群组里 `requireMention: true` 是默认值，且和 Telegram 服务端的 Privacy Mode 配合。如果改成 `--no-mention`，必须同时去 BotFather 关掉 Privacy Mode，否则消息根本不会到达 bot。
 - `ackReaction` 只能用 Telegram 的固定 emoji 白名单。自定义 emoji 和不在列表里的 unicode emoji 会被静默忽略。
+
+---
+
+> 本章来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

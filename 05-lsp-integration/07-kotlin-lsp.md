@@ -32,3 +32,9 @@ Kotlin 和 Java 混合的项目里，LSP 尤其有用——手动追踪跨语言
 - kotlin-lsp 是比较新的项目（JetBrains 此前的 Kotlin 分析主要在 IntelliJ 内部），功能完善程度不如 IntelliJ 内置的 Kotlin 插件。
 - 对某些 Kotlin 编译器插件（如 KSP 生成的代码）的分析可能不完整。
 - 目前安装渠道有限，非 macOS 用户的安装体验不太好。
+
+---
+
+> 本章来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

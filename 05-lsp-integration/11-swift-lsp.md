@@ -38,3 +38,9 @@ Swift Package 的开发场景也适用——纯命令行环境下写一个 Swift
 - SourceKit-LSP 在 Linux 上的功能不如 macOS 完整。某些 Apple 平台特有的框架（UIKit、SwiftUI）的类型信息在 Linux 上不可用——这不奇怪，这些框架本来就只在 Apple 平台上存在。
 - Xcode 项目（.xcodeproj / .xcworkspace）的支持不如 Swift Package Manager 项目好。SourceKit-LSP 更擅长处理 SPM 结构的项目。
 - 如果你的项目混合了 Swift 和 Objective-C，确保桥接头文件配置正确，否则跨语言的分析会断掉。
+
+---
+
+> 本章来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

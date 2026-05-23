@@ -104,3 +104,9 @@ Claude：[继续推进，到下一个决策点再停]
 **不适合所有类型的任务**。让 Claude 帮你改个 typo、调个 CSS 间距、加个 import——这些场景不需要学习模式。插件没有根据任务类型自动关闭的机制。
 
 **这是一个"未发布"功能的复刻**。plugin.json 的描述说 "mimics the unshipped Learning output style"——这个功能在官方版本中从未正式上线。作为插件复刻出来，说明官方可能对它的效果还不够满意，但社区可以先用着。
+
+---
+
+> 本章来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

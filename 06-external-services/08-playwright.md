@@ -49,3 +49,9 @@
 - 无头模式（headless）是默认行为，你看不到浏览器窗口。如果需要看到操作过程，需要手动配置。
 - 对于需要登录的页面，cookie/session 不会跨会话保持。每次启动是一个干净的浏览器环境。
 - 不适合做大规模爬虫，这不是它的设计用途。
+
+---
+
+> 本章来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

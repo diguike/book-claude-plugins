@@ -100,3 +100,9 @@ PR 合了一堆之后跑一次，清理本地过期分支。
 - `/commit-push-pr` 检测到当前在 main 分支时会自动建分支，但分支命名是 Claude 自己取的，你无法提前指定。如果在意分支名，先自己 `git checkout -b` 再跑命令
 - `/clean_gone` 执行前需要先 `git fetch --prune`，否则远程已删除的分支在本地不会标记为 [gone]。命令本身不会帮你 fetch
 - 三个命令都不会 `git push --force`、`git reset --hard` 这类破坏性操作，设计上比较安全。但 `/clean_gone` 的 `git branch -D` 是强制删除，不会检查分支上有没有未合并的本地 commit
+
+---
+
+> 本章来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

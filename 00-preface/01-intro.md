@@ -63,3 +63,9 @@
 | frontmatter | Markdown 文件顶部的 YAML 元数据块（`---` 包裹的部分） |
 | MCP | Model Context Protocol，Claude 调用外部工具的协议 |
 | prompt | 提示词/指令，给 Claude 的输入文本 |
+
+---
+
+> 本章来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

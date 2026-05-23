@@ -182,3 +182,9 @@ claude \
 ```
 
 这种本地加载方式不影响你全局安装的插件，两边互不干扰。实验完想清理干净，不传 `--plugin-dir` 就回到了只有全局插件的状态。
+
+---
+
+> 本章来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

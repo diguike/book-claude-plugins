@@ -132,3 +132,9 @@ Python 脚本需要 Python 3 环境。description 优化功能需要 `claude` CL
 - 浏览器查看器（generate_review.py）在无头环境（服务器、CI）里需要加 `--static` 参数生成静态 HTML。SKILL.md 里强调了好几次"一定要用 generate_review.py 生成查看器，不要自己手写 HTML"——看来 Claude 经常想自己生成
 - eval query 的质量决定了优化效果。SKILL.md 花了大量篇幅教怎么写好的 eval query：不能太抽象、should-not-trigger 的 case 要是"近似miss"而不是明显无关、要有上下文细节和口语化表达。这部分写得非常实在
 - `.skill` 打包功能需要 `present_files` 工具。不是所有环境都有这个工具，没有就跳过打包步骤
+
+---
+
+> 本章来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

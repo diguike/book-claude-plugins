@@ -122,3 +122,9 @@ grep '^iteration:' .claude/ralph-loop.local.md
 **Windows 兼容性有坑。** `bash` 命令可能指向 WSL 的 bash 而不是 Git Bash，导致 hook 脚本报错。需要手动改 hooks.json 把命令路径指向 `C:/Program Files/Git/bin/bash.exe`。
 
 **prompt 不可变。** 循环里每次喂的 prompt 完全一样。如果你想根据进度动态调整 prompt，这个机制不支持。Claude 只能靠读取文件和 git history 来感知进度变化。
+
+---
+
+> 本章来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

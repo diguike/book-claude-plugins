@@ -90,3 +90,9 @@ No issues found. Checked for bugs and CLAUDE.md compliance.
 **输出格式里要求完整 SHA**。评论中链接代码行用的是 `https://github.com/.../blob/<full-sha>/...` 格式，不能用 `$(git rev-parse HEAD)` 这种动态拼接——因为评论是 Markdown 渲染的，shell 变量不会被执行。这个细节容易被忽略导致链接失效。
 
 **不能审查自己写的代码**。如果你让 Claude 写了代码再让它审查，因为是同一个 session 的上下文，审查的客观性会打折扣。这个插件设计上是审查别人提的 PR。
+
+---
+
+> 本章来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

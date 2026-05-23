@@ -53,3 +53,9 @@
 | telegram | 第 6 章·外部服务集成 | Telegram 消息通道（本地 channel 模式） |
 | terraform | 第 6 章·外部服务集成 | Terraform IaC 集成（Docker 容器运行） |
 | typescript-lsp | 第 5 章·LSP 语言服务器集成 | TypeScript/JavaScript 语言服务器 |
+
+---
+
+> 本附录来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

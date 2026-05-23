@@ -95,3 +95,9 @@ function processItems(items: Item[]): Result[] {
 **自动触发可能不是你想要的**。有时候你写了一段代码只是临时用用，或者还在迭代中不想被打磨。自动触发机制可能在你不想被打扰的时候介入。
 
 **模型固定为 opus**。不管你当前会话用的是什么模型，`code-simplifier` Agent 都会用 opus。这意味着更高的 token 消耗和延迟。对于小改动来说有点杀鸡用牛刀。
+
+---
+
+> 本章来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

@@ -63,3 +63,9 @@ Neovim 用户是另一个大群体。Neovim 配置和插件全是 Lua 写的，l
 - Lua 版本之间的差异不小（5.1 和 5.4 的标准库 API 有不少区别），一定要在配置里指定正确的版本，否则诊断结果会误报。
 - LuaJIT 和 Lua 5.1 兼容但有差异（比如 LuaJIT 支持 `goto` 语句），配置里有单独的 LuaJIT 选项。
 - 对于高度动态的 Lua 代码（大量使用 metatables、`setfenv`、动态加载），静态分析能做的很有限。这是语言特性决定的，不是工具的问题。
+
+---
+
+> 本章来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

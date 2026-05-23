@@ -460,3 +460,9 @@ echo '{"tool_name":"Bash","tool_input":{"command":"ls"}}' | \
 5. **重启 Claude Code**：hooks 和 MCP 配置的变更需要重启
 6. **独立测试组件**：hook 脚本可以用 echo + pipe 独立测试，MCP 服务器可以手动启动测试
 7. **查看 `/hooks` 和 `/mcp`**：确认组件是否被正确加载和注册
+
+---
+
+> 本附录来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

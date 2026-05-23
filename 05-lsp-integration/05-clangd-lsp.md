@@ -77,3 +77,9 @@ C/C++ 项目是最需要 LSP 辅助的语言之一。头文件层层嵌套、模
 - 头文件搜索路径配置不对是最常见的问题来源。clangd 报 `file not found` 时，先查编译数据库。
 - clangd 对某些复杂的模板元编程分析不完整——这不能怪 clangd，C++ 的模板系统本来就是图灵完备的。
 - 如果项目同时有 C 和 C++ 文件，注意 `.h` 文件可能被当作 C 或 C++ 来分析，取决于编译数据库里的设置。
+
+---
+
+> 本章来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

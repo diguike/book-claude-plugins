@@ -98,3 +98,9 @@ claude --channels plugin:discord@claude-plugins-official
 - 多 bot 实例需要设置不同的 `DISCORD_STATE_DIR`，否则 access.json 会冲突。
 - bot 的 typing indicator 自动触发——Discord 用户能看到"正在输入…"。
 - Guild 频道里的 thread 继承父频道的配置，不需要单独设置。
+
+---
+
+> 本章来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

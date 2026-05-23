@@ -340,3 +340,9 @@ my-plugin/
 #!/bin/bash
 source "${CLAUDE_PLUGIN_ROOT}/lib/utils.sh"
 ```
+
+---
+
+> 本章来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

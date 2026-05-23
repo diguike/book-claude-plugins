@@ -59,3 +59,9 @@ export GREPTILE_API_KEY="your-api-key-here"
 - 需要 Greptile 付费账号（有 API 访问权限）。
 - 仓库必须先在 Greptile 平台上连接过，否则 API 查不到数据。
 - Greptile 同时支持 GitHub 和 GitLab，但具体可用功能取决于你连接的平台。
+
+---
+
+> 本章来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

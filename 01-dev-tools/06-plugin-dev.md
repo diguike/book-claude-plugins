@@ -106,3 +106,9 @@ claude --plugin-dir /path/to/plugin-dev
 - command-development skill 的说明里反复提到 `commands/` 是 legacy 格式，推荐用 `skills/<name>/SKILL.md`。但实际上很多现有插件（包括 commit-commands、feature-dev）仍然用 `commands/`。新建插件按推荐的来就行，维护旧插件不用急着迁移
 - agent-creator 生成的 agent 质量取决于你描述需求的清晰度。描述太模糊它会追问，但如果你给了个似是而非的描述，它可能生成一个方向偏了的 agent
 - 校验脚本（validate-agent.sh、validate-hook-schema.sh 等）是 bash 写的，依赖 jq 等工具。Windows 环境可能需要 WSL
+
+---
+
+> 本章来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

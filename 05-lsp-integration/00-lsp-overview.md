@@ -148,3 +148,9 @@ Claude 在分析代码时看到一个不熟悉的函数调用，可以通过 LSP
 **项目配置影响结果**。语言服务器的表现依赖于项目配置。TypeScript 需要 `tsconfig.json`，Go 需要正确的 `go.mod`，C/C++ 需要 `compile_commands.json`。配置缺失或错误，LSP 的分析结果就不可靠。这不是插件的问题，是语言服务器本身的要求。
 
 下面的 12 个章节，每个语言只讲差异点——安装方式、特有功能、注意事项。通用部分这里已经覆盖了，不再重复。
+
+---
+
+> 本章来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)

@@ -130,3 +130,9 @@ app.listen(3000);
 **MCP app 的 widget 调试很痛。** iframe 的 CSP 限制是 widget 白屏的头号原因，而且错误不会出现在主控制台。得打开 iframe 自己的 devtools 才能看到。Claude Desktop 还会缓存 UI 资源，改了 HTML 必须完全退出重启才能刷新。
 
 **版本敏感。** 插件专门维护了一个 `references/versions.md` 文件，列出所有版本相关的声明。ext-apps 的 CDN pin、MCPB manifest schema 版本、Cloudflare 模板路径——这些都可能过时。
+
+---
+
+> 本章来自《Claude 插件官方指南》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)
