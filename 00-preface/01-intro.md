@@ -1,3 +1,7 @@
+> **配套资源**  
+> 源码仓库 · [github.com/diguike/book-claude-plugins](https://github.com/diguike/book-claude-plugins)  
+> 在线阅读 · [inferloop.dev/claude-plugins](https://inferloop.dev/claude-plugins)
+
 # 本书简介
 
 这本书拆解 `claude-plugins-official` 仓库里的每一个插件——33 个 Anthropic 官方插件和 16 个第三方外部插件，共 49 个。
