@@ -1,8 +1,14 @@
+---
+title: Linear 插件
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/WRtMwkzZpiMeP6kg61VcjG4mnWe"
+last_synced: "2026-05-25T00:00:06+08:00"
+---
+
 # 6.3 Linear
 
 ## 定位
 
-Linear 项目管理平台的 MCP 集成。在 Claude Code 里直接创建 issue、更新状态、搜索任务。
+[Linear](https://linear.app) 项目管理平台的 MCP 集成。在 Claude Code 里直接创建 issue、更新状态、搜索任务。
 
 ## 核心功能
 

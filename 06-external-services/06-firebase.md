@@ -1,12 +1,18 @@
+---
+title: Firebase 插件
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/NhWlwZnSMih7y4kLQ1ScXN7Jnmg"
+last_synced: "2026-05-25T00:00:12+08:00"
+---
+
 # 6.6 Firebase
 
 ## 定位
 
-Google Firebase 的 MCP 集成，通过本地 `firebase-tools` CLI 运行。管理 Firestore、Auth、Cloud Functions、Hosting、Storage。
+Google [Firebase](https://firebase.google.com) 的 MCP 集成，通过本地 `firebase-tools` CLI（Command Line Interface，命令行接口）运行。管理 Firestore、Auth、Cloud Functions、Hosting、Storage。
 
 ## 核心功能
 
-这是一个本地 stdio 类型的 MCP 服务器，运行方式是 `npx firebase-tools@latest mcp`。和前面几个远程 HTTP 服务不同，它在你本地跑，通过 Firebase CLI 与 Google 后端通信。
+这是一个本地 stdio（standard input/output，标准输入输出）类型的 MCP 服务器，运行方式是 `npx -y firebase-tools@latest mcp`。和前面几个远程 HTTP 服务不同，它在你本地跑，通过 Firebase CLI 与 Google 后端通信。
 
 - Firestore 数据库读写
 - Authentication 用户管理

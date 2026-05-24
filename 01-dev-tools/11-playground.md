@@ -1,10 +1,16 @@
+---
+title: playground：生成独立的交互式 HTML 探索工具
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/GIahwIxuliKEOBkTCqOcrfB7nQ0"
+last_synced: "2026-05-24T23:59:14+08:00"
+---
+
 # playground：生成独立的交互式 HTML 探索工具
 
-一句话：playground 插件指导 Claude 生成单文件的交互式 HTML 页面——左边控件、右边实时预览、底部生成一段可复制的 prompt，用于把视觉化的选择结果喂回 Claude。
+一句话：playground 插件指导 [Claude Code](https://claude.com/claude-code) 生成单文件的交互式 HTML 页面——左边控件、右边实时预览、底部生成一段可复制的 prompt（提示词），用于把视觉化的选择结果喂回 Claude。
 
 ## 技术原理
 
-这是一个纯 Skill 插件，包含一个 `playground` Skill 和六个模板文件。没有可执行代码。
+这是一个纯 Skill（技能）插件，包含一个 `playground` Skill 和六个模板文件。没有可执行代码。
 
 Skill 的核心指令定义了"什么是 playground"：一个自包含的 HTML 文件，内联所有 CSS 和 JS，不依赖任何 CDN。文件内部维护一个全局 state 对象，所有控件写入 state，所有渲染读取 state，每次控件变化立刻触发 `updateAll()` 更新预览和 prompt 输出。
 

@@ -1,8 +1,14 @@
+---
+title: Playwright 插件
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/DpMLwpEV4i3Sx4kebGMc7AvNnQc"
+last_synced: "2026-05-25T00:00:16+08:00"
+---
+
 # 6.8 Playwright
 
 ## 定位
 
-微软出品的浏览器自动化 MCP 服务器。Claude 可以操控浏览器——打开网页、截图、填表、点按钮、跑端到端测试。
+微软出品的浏览器自动化 MCP 服务器（[Playwright](https://playwright.dev) 项目官方维护）。Claude 可以操控浏览器——打开网页、截图、填表、点按钮、跑端到端测试。
 
 ## 核心功能
 

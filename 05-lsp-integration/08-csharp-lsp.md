@@ -1,6 +1,12 @@
+---
+title: C# LSP
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/MkSiw4phjiKWb1k7H9LcaR48nqh"
+last_synced: "2026-05-24T23:59:53+08:00"
+---
+
 # C# LSP
 
-**语言服务器**：csharp-ls（社区项目，不是微软的 OmniSharp）
+**语言服务器**：[csharp-ls](https://github.com/razzmatazz/csharp-language-server)（社区项目，不是微软的 OmniSharp）
 
 **支持的扩展名**：`.cs`
 

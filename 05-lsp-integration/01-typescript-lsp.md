@@ -1,6 +1,12 @@
+---
+title: TypeScript LSP
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/NNyCwY2O9iAcYDkhqP7cfzGonte"
+last_synced: "2026-05-24T23:59:39+08:00"
+---
+
 # TypeScript LSP
 
-**语言服务器**：typescript-language-server（基于 TypeScript 自带的 tsserver）
+**语言服务器**：[typescript-language-server](https://github.com/typescript-language-server/typescript-language-server)（基于 TypeScript 自带的 tsserver，TypeScript Server，即 TypeScript 内置的语言分析服务进程）
 
 **支持的扩展名**：`.ts`、`.tsx`、`.js`、`.jsx`、`.mts`、`.cts`、`.mjs`、`.cjs`
 

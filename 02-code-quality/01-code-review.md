@@ -1,10 +1,16 @@
+---
+title: code-review：多 Agent 协作的 PR 自动审查
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/GNATw0nesioVwekYbdzcmjrdnEe"
+last_synced: "2026-05-24T23:59:21+08:00"
+---
+
 # code-review：多 Agent 协作的 PR 自动审查
 
-一个围绕 GitHub Pull Request 做自动代码审查的插件，核心思路是用多个不同职责的子 Agent 并行审查，再用置信度评分过滤掉误报，最终把结果评论回 PR。
+一个围绕 GitHub Pull Request（PR）做自动代码审查的插件，核心思路是用多个不同职责的子 Agent（subagent）并行审查，再用置信度评分过滤掉误报，最终把结果评论回 PR。
 
 ## 技术原理
 
-这个插件只有一个 slash command `/code-review`，定义在 `commands/code-review.md`。它不是一个传统意义上的"代码"插件——没有 TypeScript，没有运行时逻辑，整个实现就是一份给 Claude 的详细指令文档。Claude 按指令编排子 Agent 完成工作。
+这个插件只有一个 slash command `/code-review`，定义在 `commands/code-review.md`。它不是一个传统意义上的"代码"插件——没有 TypeScript，没有运行时逻辑，整个实现就是一份给 Claude 的详细指令文档（prompt）。Claude 按指令编排子 Agent 完成工作。
 
 工作流程分 8 步，概括起来是三个阶段：
 
@@ -43,10 +49,10 @@
 ## 使用方法
 
 ```
-/code-review <PR URL 或 PR 编号>
+/code-review
 ```
 
-Claude 会自动走完整个流程。你看到的最终输出是一条 PR 评论，格式固定：
+命令本身不需要参数：在已经 checkout 到 PR 分支的目录下执行，Claude 通过 `gh` CLI（Command-Line Interface）读取当前 PR 上下文，然后自动走完整个流程。你看到的最终输出是一条 PR 评论，格式固定：
 
 ```markdown
 ### Code review
@@ -69,7 +75,7 @@ No issues found. Checked for bugs and CLAUDE.md compliance.
 
 ## 使用场景
 
-**CI 集成自动审查**。把 `/code-review` 接入 GitHub Actions，每个 PR 创建时自动触发。比人工审查快，而且不会因为赶进度跳过。它不替代人工审查——80 分阈值意味着它只报高置信度的问题，剩下的还是靠人看。
+**CI/CD（Continuous Integration / Continuous Deployment）集成自动审查**。把 `/code-review` 接入 GitHub Actions，每个 PR 创建时自动触发。比人工审查快，而且不会因为赶进度跳过。它不替代人工审查——80 分阈值意味着它只报高置信度的问题，剩下的还是靠人看。
 
 **大团队的 CLAUDE.md 规范执行**。项目有几十条编码规范写在 CLAUDE.md 里，新人容易漏。Agent #1 专门对照 CLAUDE.md 检查，比人记得牢。
 

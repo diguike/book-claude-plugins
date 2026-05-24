@@ -1,6 +1,12 @@
+---
+title: Ruby LSP
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/JFMiwjqLEiIAMVkBQnFciw6LnTa"
+last_synced: "2026-05-24T23:59:55+08:00"
+---
+
 # Ruby LSP
 
-**语言服务器**：ruby-lsp（Shopify 开发维护）
+**语言服务器**：[ruby-lsp](https://github.com/Shopify/ruby-lsp)（Shopify 开发维护）
 
 **支持的扩展名**：`.rb`、`.rake`、`.gemspec`、`.ru`、`.erb`
 

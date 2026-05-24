@@ -1,8 +1,14 @@
+---
+title: Discord 插件
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/T1B7wB7FJi9JdfksNPscRgKcnrh"
+last_synced: "2026-05-25T00:00:19+08:00"
+---
+
 # 6.9 Discord
 
 ## 定位
 
-Discord 消息通道插件。把 Discord bot 接入 Claude Code，别人在 Discord 发消息，Claude 能收到并回复。本质上是一个消息桥接器，带完整的访问控制。
+[Discord](https://discord.com) 消息通道插件。把 Discord bot 接入 Claude Code，别人在 Discord 发消息，Claude 能收到并回复。本质上是一个消息桥接器，带完整的访问控制。
 
 ## 核心功能
 

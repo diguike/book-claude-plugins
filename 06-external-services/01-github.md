@@ -1,16 +1,22 @@
+---
+title: GitHub 插件
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/FpHqwWRH2iOTMEkWftxcHmgFnTc"
+last_synced: "2026-05-25T00:00:02+08:00"
+---
+
 # 6.1 GitHub
 
 ## 定位
 
-GitHub 官方 MCP 服务器，把 GitHub API 直接接入 Claude Code。建 issue、review PR、搜仓库，不用切浏览器。
+[GitHub](https://github.com) 官方 MCP（Model Context Protocol，模型上下文协议）服务器，把 GitHub API（Application Programming Interface）直接接入 Claude Code。建 issue、review PR（Pull Request，拉取请求）、搜仓库，不用切浏览器。
 
 ## 核心功能
 
-这是一个 HTTP 类型的远程 MCP 服务器，由 GitHub（Copilot 团队）托管在 `api.githubcopilot.com`。接入后 Claude 可以调用 GitHub 的完整 API——包括但不限于：
+这是一个 HTTP（HyperText Transfer Protocol）类型的远程 MCP 服务器，由 GitHub（Copilot 团队）托管在 `api.githubcopilot.com`。接入后 Claude 可以调用 GitHub 的完整 API——包括但不限于：
 
 - 仓库管理（创建、fork、搜索）
 - Issue 操作（创建、评论、关闭、打标签）
-- Pull Request 全流程（创建、review、merge、查看 diff）
+- PR 全流程（创建、review、merge、查看 diff）
 - 代码搜索
 - 分支管理
 - Release 发布
@@ -23,7 +29,7 @@ GitHub 官方 MCP 服务器，把 GitHub API 直接接入 Claude Code。建 issu
 /plugin install github@claude-plugins-official
 ```
 
-需要一个 GitHub Personal Access Token (PAT)。到 GitHub → Settings → Developer settings → Personal access tokens 生成，按需勾选权限（至少 `repo` 和 `read:org`）。
+需要一个 GitHub Personal Access Token（PAT，个人访问令牌）。到 GitHub → Settings → Developer settings → Personal access tokens 生成，按需勾选权限（至少 `repo` 和 `read:org`）。
 
 token 通过环境变量传入：
 
@@ -31,7 +37,7 @@ token 通过环境变量传入：
 export GITHUB_PERSONAL_ACCESS_TOKEN="ghp_xxxxxxxxxxxx"
 ```
 
-写进 shell profile 即可。插件通过 HTTP 连接 `https://api.githubcopilot.com/mcp/`，请求头带上这个 token。
+写进 shell profile 即可。插件通过 HTTP 连接 `https://api.githubcopilot.com/mcp/`，请求头带上这个 token（`Authorization: Bearer ${GITHUB_PERSONAL_ACCESS_TOKEN}`）。
 
 ## 典型使用场景
 
@@ -41,7 +47,7 @@ export GITHUB_PERSONAL_ACCESS_TOKEN="ghp_xxxxxxxxxxxx"
 
 **场景二：PR review 辅助**
 
-"看一下 #42 这个 PR 的 diff，有没有明显问题"——Claude 拉取 diff 内容，指出潜在问题，甚至可以直接留 review comment。
+"看一下 #42 这个 PR 的 diff，有没有明显问题"——Claude 拉取 diff 内容，指出潜在问题，甚至可以直接留 review 评论。
 
 **场景三：快速搜索**
 

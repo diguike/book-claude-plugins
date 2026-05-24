@@ -1,6 +1,12 @@
+---
+title: Kotlin LSP
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/BMY7waAy2i24DGkWHt7cN6xXniC"
+last_synced: "2026-05-24T23:59:51+08:00"
+---
+
 # Kotlin LSP
 
-**语言服务器**：kotlin-lsp（JetBrains 官方出品）
+**语言服务器**：[kotlin-lsp](https://github.com/Kotlin/kotlin-lsp)（JetBrains 官方出品）
 
 **支持的扩展名**：`.kt`、`.kts`
 

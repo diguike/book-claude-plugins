@@ -1,6 +1,12 @@
+---
+title: jdtls LSP（Java）
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/POzBwKGn1iyMLekPSAacfuipnMf"
+last_synced: "2026-05-24T23:59:49+08:00"
+---
+
 # jdtls LSP（Java）
 
-**语言服务器**：Eclipse JDT Language Server（jdtls）
+**语言服务器**：[Eclipse JDT Language Server](https://github.com/eclipse-jdtls/eclipse.jdt.ls)（jdtls，JDT 即 Java Development Tools）
 
 **支持的扩展名**：`.java`
 
@@ -27,7 +33,7 @@ yay -S jdtls
 jdtls 的底层是 Eclipse 的 JDT（Java Development Tools），这是一个经历了 20 多年打磨的 Java 分析引擎：
 
 - **Maven/Gradle 项目感知**。能自动读取 `pom.xml` 或 `build.gradle`，解析依赖，下载缺失的 jar 包。
-- **重构能力**。提取方法、提取接口、内联变量、改变方法签名等。这方面 jdtls 是 12 个语言服务器里最强的——Java 社区一直重视 IDE 级别的重构工具。
+- **重构能力**。提取方法、提取接口、内联变量、改变方法签名等。这方面 jdtls 是 12 个语言服务器里最强的——Java 社区一直重视 IDE（Integrated Development Environment，集成开发环境）级别的重构工具。
 - **注解处理器支持**。Lombok 之类的注解处理器生成的代码，jdtls 能正确识别。
 - **多项目工作区**。能同时打开多个相关的 Maven/Gradle 项目。
 

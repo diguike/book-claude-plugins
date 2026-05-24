@@ -1,12 +1,18 @@
+---
+title: claude-md-management：CLAUDE.md 维护工具
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/DtmCwMqcfis5wFkoexKcWAZXnj6"
+last_synced: "2026-05-24T23:58:58+08:00"
+---
+
 # claude-md-management：CLAUDE.md 维护工具
 
-审计和改进 CLAUDE.md 文件质量，从会话中提取经验写回项目记忆。两个工具，一个管长期维护，一个管即时捕获。
+审计和改进 [Claude Code](https://claude.com/claude-code) 项目里 CLAUDE.md 文件的质量，从会话中提取经验写回项目记忆。两个工具，一个管长期维护，一个管即时捕获。
 
 ## 技术原理
 
 插件包含两个组件，用途不同，互相补充：
 
-### claude-md-improver（模型触发型 skill）
+### claude-md-improver（模型触发型 Skill）
 
 当你说"审计我的 CLAUDE.md"、"检查 CLAUDE.md 是否过时"时触发。工作流分五步：
 
@@ -43,7 +49,7 @@
 3. 每条只写一行，格式是 `<命令或模式> - <简短说明>`
 4. 展示 diff，等用户确认后再写入
 
-allowed-tools 限制为 `Read, Edit, Glob`，没有 Bash 和 Write，降低了误操作风险。
+frontmatter（YAML 元数据头）里的 `allowed-tools` 限制为 `Read, Edit, Glob`，没有 Bash 和 Write，降低了误操作风险。
 
 ## 安装与配置
 

@@ -1,22 +1,28 @@
+---
+title: example-plugin：插件开发的脚手架参考
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/K2mYwQaegijrxrkFh5bcRzWsnZO"
+last_synced: "2026-05-24T23:58:54+08:00"
+---
+
 # example-plugin：插件开发的脚手架参考
 
-Claude Code 插件系统的官方示例，展示了插件的三种核心扩展机制——slash command、skill 和 MCP server——的最小可运行结构。
+[Claude Code](https://claude.com/claude-code) 插件系统的官方示例，展示了插件的三种核心扩展机制——slash command、Skill（技能）和 MCP（Model Context Protocol，模型上下文协议，<https://modelcontextprotocol.io>）server——的最小可运行结构。
 
 ## 技术原理
 
 一个 Claude Code 插件的识别入口是 `.claude-plugin/plugin.json`。Claude Code 启动时扫描到这个文件，就知道这是一个插件目录，然后按约定路径自动发现组件：
 
 - `commands/*.md` —— 注册为 slash command（用户输入 `/命令名` 触发）
-- `skills/*/SKILL.md` —— 注册为 skill（Claude 根据上下文自动调用，或用户手动 `/skill名` 触发）
+- `skills/*/SKILL.md` —— 注册为 Skill（Claude 根据上下文自动调用，或用户手动 `/skill名` 触发）
 - `.mcp.json` —— 声明 MCP server 配置
 
 example-plugin 里这三种都有，而且故意展示了同一个 command 的两种写法：
 
 **旧格式**：`commands/example-command.md`，文件名即命令名。
 
-**新格式**：`skills/example-command/SKILL.md`，目录名即命令名，SKILL.md 里通过 frontmatter 的 `name` 字段指定。
+**新格式**：`skills/example-command/SKILL.md`，目录名即命令名，SKILL.md 里通过 frontmatter（YAML 元数据头）的 `name` 字段指定。
 
-两种写法被 Claude Code 以完全相同的方式加载，区别仅在文件组织。官方推荐新格式，因为 skill 目录下可以放 `references/`、`scripts/`、`examples/` 等子目录，方便打包更多资源。
+两种写法被 Claude Code 以完全相同的方式加载，区别仅在文件组织。官方推荐新格式，因为 skill 目录下可以放 `references/`、`scripts/`、`examples/` 等子目录，方便打包更多资源。example-plugin 里两种写法都摆了一份，但 `example-command.md` 的正文里也明确标注了"legacy format"。
 
 ### Skill 的两种模式
 
@@ -58,7 +64,7 @@ version: 1.0.0
 }
 ```
 
-声明一个 HTTP 类型的 MCP server。实际使用中 URL 换成真实服务地址就行。支持的类型还有 `stdio`（本地进程）、`sse`（Server-Sent Events）等。
+声明一个 HTTP 类型的 MCP server。实际使用中 URL 换成真实服务地址就行。支持的类型还有 `stdio`（本地进程）、`sse`（Server-Sent Events）等。example-plugin 自带的 URL 是 `https://mcp.example.com/api`，纯占位符，连不通。
 
 ## 安装与配置
 
@@ -98,7 +104,7 @@ claude --plugin-dir /path/to/my-new-plugin
 
 - MCP server 配置指向一个不存在的示例 URL，不要期望它能连通
 - 两种格式的 command 同名（都叫 example-command），实际项目里不要这样做，会冲突
-- 这个插件没有 hooks 和 agents 的示例。要看这两类组件的例子，得去 feature-dev 或 plugin-dev 插件
+- 这个插件没有 hook（钩子，挂载到 Claude Code 事件的脚本或 prompt）和 agent（subagent）的示例。要看这两类组件的例子，得去 feature-dev 或 plugin-dev 插件
 - Skill 的 `allowed-tools` 字段作用是预授权——这些工具执行时不再弹确认提示。写少了需要频繁点确认，写多了会降低安全性
 
 ---

@@ -1,10 +1,16 @@
+---
+title: frontend-design：反 AI 审美的前端设计 Skill
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/DoVtwawALiuxZnkptM5c2NNOnFg"
+last_synced: "2026-05-24T23:59:33+08:00"
+---
+
 # frontend-design：反 AI 审美的前端设计 Skill
 
-一个前端 UI/UX 设计 skill，核心诉求是生成有设计感的、不千篇一律的前端界面代码，刻意回避 AI 生成内容常见的"AI 味"审美。
+一个前端 UI（User Interface，用户界面）/UX（User Experience，用户体验）设计 Skill，核心诉求是生成有设计感的、不千篇一律的前端界面代码，刻意回避 AI 生成内容常见的"AI 味"审美。
 
 ## 技术原理
 
-这个插件使用的是 **skill** 扩展点，定义在 `skills/frontend-design/SKILL.md`。Skill 跟 Agent 和 Command 不同——它是一份领域知识文档，Claude 在识别到相关任务时自动参考。
+这个插件使用的是 **Skill** 扩展点，定义在 `skills/frontend-design/SKILL.md`。Skill 跟 Agent 和 Command 不同——它是一份领域知识文档（本质上是一段额外的 prompt），Claude 在识别到相关任务时自动参考。
 
 SKILL.md 的触发条件写在 description 里："when the user asks to build web components, pages, or applications"。不需要 slash command 手动调用，Claude 判断你在做前端开发就会应用这份指导。
 

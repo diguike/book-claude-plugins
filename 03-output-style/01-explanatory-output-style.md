@@ -1,12 +1,18 @@
+---
+title: explanatory-output-style：教学解释输出风格
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/JXO2w1jNIi4pVlkLgaScybQ5nCg"
+last_synced: "2026-05-24T23:59:29+08:00"
+---
+
 # explanatory-output-style：教学解释输出风格
 
-让 Claude 在写代码时附带简短的教学解释——关于实现选择、代码库模式的 insight 说明，通过一个 SessionStart hook 注入系统提示来实现。
+让 Claude 在写代码时附带简短的教学解释——关于实现选择、代码库模式的 insight 说明，通过一个 SessionStart Hook 注入系统提示（system prompt）来实现。
 
 ## 技术原理
 
 这个插件的实现方式是所有插件里最简单的一种：一个 shell 脚本，在 session 启动时往 Claude 的上下文里注入一段额外指令。
 
-`hooks.json` 注册了一个 `SessionStart` hook，触发时执行 `hooks-handlers/session-start.sh`。这个 shell 脚本做的事情就是 `cat` 一段 JSON 到 stdout：
+`hooks.json` 注册了一个 `SessionStart` Hook（会话启动时触发），命中后执行 `hooks-handlers/session-start.sh`。这个 shell 脚本做的事情就是 `cat` 一段 JSON 到 stdout：
 
 ```json
 {

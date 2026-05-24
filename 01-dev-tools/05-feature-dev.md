@@ -1,10 +1,16 @@
+---
+title: feature-dev：结构化功能开发工作流
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/ElwKweYObijNbDkIH4Nc96aZnDb"
+last_synced: "2026-05-24T23:59:02+08:00"
+---
+
 # feature-dev：结构化功能开发工作流
 
-一套七阶段的功能开发流程。不是直接写代码，而是先理解代码库、问清楚需求、设计架构方案、选定后再实现，最后代码审查。通过三类 subagent（code-explorer、code-architect、code-reviewer）并行工作。
+一套七阶段的 [Claude Code](https://claude.com/claude-code) 功能开发流程。不是直接写代码，而是先理解代码库、问清楚需求、设计架构方案、选定后再实现，最后代码审查。通过三类 subagent（子代理，独立上下文运行的 Agent）——code-explorer、code-architect、code-reviewer——并行工作。
 
 ## 技术原理
 
-插件包含一个 slash command（`/feature-dev`）和三个 agent 定义。核心逻辑全在 command 文件里——它是一份给 Claude 的分阶段工作指令。
+插件包含一个 slash command（`/feature-dev`）和三个 Agent 定义。核心逻辑全在 command 文件里——它是一份给 Claude 的分阶段工作指令。
 
 ### 七阶段流程
 
@@ -48,10 +54,10 @@ Claude 汇总所有方案，形成自己的推荐意见，然后让用户选。
 
 - 都用 sonnet 模型，不用 opus——在 subagent 场景下 sonnet 的性价比更高
 - 都有 `color` 字段（yellow、green、red），终端里能直观区分
-- tools 列表中有 `BashOutput`（Bash 工具的只读输出变体）和 `KillShell`（终止挂起的 shell 进程），但没有 `Write` 和 `Edit`——explorer 和 reviewer 是只读的
-- code-architect 也没有写权限，它只输出设计蓝图，不动代码
+- tools 列表统一是 `Glob, Grep, LS, Read, NotebookRead, WebFetch, TodoWrite, WebSearch, KillShell, BashOutput`，没有 `Write` 和 `Edit`，也没有 `Bash` 本身——三个 agent 都是只读的
+- code-architect 同样没有写权限，它只输出设计蓝图，不动代码
 
-code-reviewer 的 description 里明确写了"review unstaged changes from `git diff`"——默认审查未提交的变更，不是整个代码库。
+code-reviewer 的 description 里明确写了"review unstaged changes from `git diff`"——默认审查未提交的变更，不是整个代码库。置信度阈值 80 也写死在 system prompt（系统提示词）里。
 
 ## 安装与配置
 

@@ -1,6 +1,12 @@
+---
+title: plugin-dev：插件开发工具箱
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/S3F8wVpJ8iGYYsk7nmkcGeZvnKc"
+last_synced: "2026-05-24T23:59:04+08:00"
+---
+
 # plugin-dev：插件开发工具箱
 
-开发 Claude Code 插件用的全套工具。包含七个 skill（覆盖插件结构、hook、MCP 集成、command、agent、skill、settings）、三个 agent（agent 生成器、插件校验器、skill 审查器）、一个八阶段引导式插件创建命令。
+开发 [Claude Code](https://claude.com/claude-code) 插件用的全套工具。包含七个 Skill（技能）——覆盖插件结构、hook（钩子，挂载到 Claude Code 事件的脚本/prompt）、MCP（Model Context Protocol，模型上下文协议，<https://modelcontextprotocol.io>）集成、command、agent、skill、settings——三个 Agent（agent 生成器、插件校验器、skill 审查器），一个八阶段引导式插件创建命令。
 
 ## 技术原理
 
@@ -8,7 +14,7 @@
 
 ### 七个 Skill
 
-每个 skill 遵循相同的"渐进式披露"结构：SKILL.md 主体约 1500-2000 词，包含核心 API 参考；`references/` 放详细指南；`examples/` 放可用代码；`scripts/` 放校验脚本。Claude 只有在需要细节时才会读子目录里的文件，不会一次性加载所有内容。
+每个 skill 遵循相同的"渐进式披露"结构：SKILL.md 主体约 1500-2000 词（README 标注 hook-development 1619 词、mcp-integration 1666 词、plugin-structure 1619 词、plugin-settings 1623 词、command-development 1535 词、agent-development 1438 词、skill-development 1232 词），包含核心 API 参考；`references/` 放详细指南；`examples/` 放可用代码；`scripts/` 放校验脚本。Claude 只有在需要细节时才会读子目录里的文件，不会一次性加载所有内容。
 
 **plugin-structure** —— 插件目录结构和 manifest 配置。核心内容：`.claude-plugin/plugin.json` 的必填和可选字段、组件目录约定（commands/、agents/、skills/、hooks/）、`${CLAUDE_PLUGIN_ROOT}` 路径变量的用法、自动发现机制的工作方式。附带三个示例结构（最小插件、标准插件、全功能插件）。
 
@@ -16,7 +22,7 @@
 
 **mcp-integration** —— MCP server 集成。四种 server 类型（stdio 本地进程、SSE 服务端推送、HTTP REST、WebSocket 实时），配置位置（.mcp.json 或 plugin.json 内联），环境变量展开（`${CLAUDE_PLUGIN_ROOT}` 和用户自定义变量），认证模式（OAuth、token、env var）。附带三种配置示例。
 
-**command-development** —— slash command 开发。frontmatter 字段（description、argument-hint、allowed-tools、model），`$ARGUMENTS` 参数占位符，`!` 反引号动态上下文注入。附带十个完整命令示例。
+**command-development** —— slash command 开发。frontmatter（YAML 元数据头）字段（description、argument-hint、allowed-tools、model），`$ARGUMENTS` 参数占位符，`!` 反引号动态上下文注入。附带十个完整命令示例。
 
 **agent-development** —— subagent 开发。frontmatter 里的 description 格式（用 `<example>` 块写触发示例），系统提示词设计模式（分析型、生成型、校验型、编排型），AI 辅助生成流程。附带 Claude Code 内部使用的 agent 创建系统提示词作为参考。
 

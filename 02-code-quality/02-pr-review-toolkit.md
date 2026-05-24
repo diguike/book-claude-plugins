@@ -1,6 +1,12 @@
+---
+title: pr-review-toolkit：模块化 PR 审查工具箱
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/MIlhwgOvoiEzEiktdxlcaT5En8b"
+last_synced: "2026-05-24T23:59:23+08:00"
+---
+
 # pr-review-toolkit：模块化 PR 审查工具箱
 
-一套由 6 个专项审查 Agent 组成的 PR 审查工具箱，可以按需组合使用，也可以一键全跑。
+一套由 6 个专项审查 Agent（subagent）组成的 PR（Pull Request）审查工具箱，可以按需组合使用，也可以一键全跑。
 
 ## 技术原理
 

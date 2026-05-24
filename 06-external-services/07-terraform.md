@@ -1,8 +1,14 @@
+---
+title: Terraform 插件
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/HXnhw8sZViygQnk4v49cXbO2nBe"
+last_synced: "2026-05-25T00:00:14+08:00"
+---
+
 # 6.7 Terraform
 
 ## 定位
 
-HashiCorp 官方的 Terraform MCP 服务器，辅助 Infrastructure as Code 开发。查文档、校验配置、与 Terraform Cloud/Enterprise 交互。
+HashiCorp 官方的 [Terraform](https://www.terraform.io) MCP 服务器，辅助 IaC（Infrastructure as Code，基础设施即代码）开发。查文档、校验配置、与 Terraform Cloud / Enterprise 交互。
 
 ## 核心功能
 

@@ -1,3 +1,9 @@
+---
+title: Claude Code 插件体系概述
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/G6eZwU9Owi1VNekdEulc5891n7e"
+last_synced: "2026-05-24T23:58:50+08:00"
+---
+
 # Claude Code 插件体系概述
 
 Claude Code 的插件体系建立在一个核心设计上：**约定优于配置的目录结构 + 自动发现机制**。你把文件放到对的位置，Claude Code 就能识别并加载它们。不需要注册表、不需要入口函数、不需要编译步骤。

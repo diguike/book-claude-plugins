@@ -1,12 +1,18 @@
+---
+title: Asana 插件
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/XBkqwSWZLiG2Zqkjq5gcYF3wnWb"
+last_synced: "2026-05-25T00:00:08+08:00"
+---
+
 # 6.4 Asana
 
 ## 定位
 
-Asana 项目管理平台的 MCP 集成。从 Claude Code 里创建任务、搜索项目、更新进度。
+[Asana](https://asana.com) 项目管理平台的 MCP 集成。从 Claude Code 里创建任务、搜索项目、更新进度。
 
 ## 核心功能
 
-SSE（Server-Sent Events）类型的远程 MCP 服务器，地址 `mcp.asana.com/sse`。可以：
+SSE（Server-Sent Events，服务器推送事件）类型的远程 MCP 服务器，地址 `mcp.asana.com/sse`。可以：
 
 - 创建和管理 task
 - 搜索 project 和 task

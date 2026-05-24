@@ -1,8 +1,14 @@
+---
+title: Fakechat 插件
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/HtVjwbz4jiXc7skSTysc0NLJnuf"
+last_synced: "2026-05-25T00:00:33+08:00"
+---
+
 # 6.16 Fakechat
 
 ## 定位
 
-本地 Web 聊天界面，用于测试 Claude Code 的 channel 机制。不连接任何外部服务，打开浏览器就能用。这是一个开发调试工具，不是正式的消息通道。
+本地 Web 聊天界面，用于测试 Claude Code 的 channel 机制（[源码](https://github.com/anthropics/claude-plugins-public/tree/main/external_plugins/fakechat)在官方 marketplace 仓库的 `external_plugins/fakechat` 目录）。不连接任何外部服务，打开浏览器就能用。这是一个开发调试工具，不是正式的消息通道。
 
 ## 核心功能
 

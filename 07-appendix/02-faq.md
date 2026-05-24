@@ -1,3 +1,9 @@
+---
+title: 常见问题与排错
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/Erfzw4SjViJcNVk8HHccKxN6nhh"
+last_synced: "2026-05-25T00:00:38+08:00"
+---
+
 # 常见问题与排错
 
 按类别整理 Claude Code 插件开发和使用中的常见问题。每个问题给出症状、原因和解法。

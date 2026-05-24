@@ -1,6 +1,12 @@
+---
+title: agent-sdk-dev：Agent SDK 项目脚手架与验证
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/LYlCwg9Q8iYJ0qkG1glcDZ30ngg"
+last_synced: "2026-05-24T23:59:10+08:00"
+---
+
 # agent-sdk-dev：Agent SDK 项目脚手架与验证
 
-一句话：提供一个交互式命令 `/new-sdk-app` 来创建 Claude Agent SDK 项目，外加两个验证 Agent 检查项目是否符合 SDK 最佳实践。
+一句话：提供一个交互式命令 `/new-sdk-app` 来创建 Claude Agent SDK（Software Development Kit，软件开发工具包；TypeScript 仓库 <https://github.com/anthropics/claude-agent-sdk-typescript>、Python 仓库 <https://github.com/anthropics/claude-agent-sdk-python>）项目，外加两个验证 Agent 检查项目是否符合 SDK 最佳实践。
 
 ## 技术原理
 
@@ -10,7 +16,7 @@
 2. **`agent-sdk-verifier-ts`**（`agents/agent-sdk-verifier-ts.md`）—— TypeScript 项目验证 Agent
 3. **`agent-sdk-verifier-py`**（`agents/agent-sdk-verifier-py.md`）—— Python 项目验证 Agent
 
-这三个都不是可执行代码，而是给 Claude 的行为指令。
+这三个都不是可执行代码，而是给 [Claude Code](https://claude.com/claude-code) 的行为指令。
 
 `/new-sdk-app` 的工作流程被设计成严格的一问一答模式（不是一次性抛出所有问题）：
 
@@ -38,7 +44,7 @@
 - API key 没有硬编码
 - 错误处理是否覆盖了 SDK 特有的异常
 
-检查结果输出为结构化报告：PASS / PASS WITH WARNINGS / FAIL，列出具体问题和修复建议。
+检查结果输出为结构化报告：PASS / PASS WITH WARNINGS / FAIL，列出具体问题和修复建议。API（Application Programming Interface，应用编程接口）key 是否硬编码、`.env` 是否被 `.gitignore` 排除等都在清单里。
 
 ## 安装与配置
 

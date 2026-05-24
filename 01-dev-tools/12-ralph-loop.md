@@ -1,8 +1,14 @@
+---
+title: ralph-loop：让 Claude 在同一个 prompt 上反复迭代直到完成
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/NBkFwtd2PirQjKkmmYhcCakZnvh"
+last_synced: "2026-05-24T23:59:16+08:00"
+---
+
 # ralph-loop：让 Claude 在同一个 prompt 上反复迭代直到完成
 
-一句话：ralph-loop 用 Stop hook 拦截 Claude 的退出，把同一个 prompt 反复喂回去，形成自动迭代循环，直到任务完成或达到迭代上限。
+一句话：ralph-loop 用 Stop hook（钩子，挂载到 Claude Code 事件的脚本/prompt）拦截 [Claude Code](https://claude.com/claude-code) 的退出，把同一个 prompt（提示词）反复喂回去，形成自动迭代循环，直到任务完成或达到迭代上限。
 
-> 名字来源："Ralph Wiggum 技术"是 Claude Code 社区给这种迭代模式起的别名，取自动画《辛普森一家》里那个不断重复同一件事的角色 Ralph Wiggum。核心思路是让 Claude 在一个 while-true 循环里反复执行同一个任务描述，每轮迭代都在上一轮的基础上推进，直到满足完成条件。
+> 名字来源：["Ralph Wiggum 技术"](https://ghuntley.com/ralph/)（Geoffrey Huntley 总结的概念）是 Claude Code 社区给这种迭代模式起的别名，取自动画《辛普森一家》里那个不断重复同一件事的角色 Ralph Wiggum。核心思路是让 Claude 在一个 while-true 循环里反复执行同一个任务描述，每轮迭代都在上一轮的基础上推进，直到满足完成条件。
 
 ## 技术原理
 

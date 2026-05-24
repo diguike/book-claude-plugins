@@ -1,8 +1,14 @@
+---
+title: Context7 插件
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/RRB8wZPaVi8an3k0S8xcgWPXnod"
+last_synced: "2026-05-25T00:00:29+08:00"
+---
+
 # 6.14 Context7
 
 ## 定位
 
-Upstash 出品的文档查询 MCP 服务器。从源码仓库拉取特定版本的文档和代码示例，直接注入到 Claude 的上下文里。解决的问题是：LLM 的训练数据有截止日期，而你用的库可能昨天刚发了新版。
+Upstash 出品的 [Context7](https://context7.com) 文档查询 MCP 服务器。从源码仓库拉取特定版本的文档和代码示例，直接注入到 Claude 的上下文里。解决的问题是：LLM（Large Language Model，大语言模型）的训练数据有截止日期，而你用的库可能昨天刚发了新版。
 
 ## 核心功能
 

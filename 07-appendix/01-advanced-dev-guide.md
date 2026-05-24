@@ -1,6 +1,16 @@
+---
+title: 插件开发进阶指南
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/PzcTwdl3XioRCGkGZ9CcMY4enwg"
+last_synced: "2026-05-25T00:00:35+08:00"
+---
+
 # 插件开发进阶指南
 
-这篇面向想自己写插件的开发者。前面六章拆解了 49 个插件的实现，该轮到你自己动手了。
+这篇面向想自己写插件的开发者。前面六章拆解了 52 个插件的实现，该轮到你自己动手了。
+
+> **配套源码**：本附录涉及的所有示例代码、以及书本身的 Markdown 源文件，都开源在 <https://github.com/diguike/book-claude-plugins>。  
+> **官方仓库**：上游 marketplace 在 <https://github.com/anthropics/claude-plugins-official>，是你写完插件后提交 PR 让 Anthropic 收录的入口。  
+> **官方文档**：插件开发的权威文档在 <https://code.claude.com/docs/en/plugins>。
 
 ## 从零创建一个插件
 

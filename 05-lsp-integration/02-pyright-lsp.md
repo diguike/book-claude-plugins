@@ -1,6 +1,12 @@
+---
+title: Pyright LSP
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/QW0DwNPL6idiEZkqBolcOQ99nwd"
+last_synced: "2026-05-24T23:59:41+08:00"
+---
+
 # Pyright LSP
 
-**语言服务器**：Pyright（微软出品，VS Code 的 Pylance 扩展的开源核心）
+**语言服务器**：[Pyright](https://github.com/microsoft/pyright)（微软出品，VS Code 的 Pylance 扩展的开源核心）
 
 **支持的扩展名**：`.py`、`.pyi`
 

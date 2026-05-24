@@ -1,6 +1,12 @@
+---
+title: rust-analyzer LSP
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/ZyR0wlYOvi9vUvk18l7cRqsYnqd"
+last_synced: "2026-05-24T23:59:44+08:00"
+---
+
 # rust-analyzer LSP
 
-**语言服务器**：rust-analyzer（Rust 社区开发，现已成为官方推荐的语言服务器）
+**语言服务器**：[rust-analyzer](https://github.com/rust-lang/rust-analyzer)（Rust 社区开发，现已成为官方推荐的语言服务器）
 
 **支持的扩展名**：`.rs`
 

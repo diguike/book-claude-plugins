@@ -1,19 +1,25 @@
+---
+title: skill-creator：Skill 创建与迭代优化
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/Wc8ww6yADipV6xknfmwc4C05nEc"
+last_synced: "2026-05-24T23:59:06+08:00"
+---
+
 # skill-creator：Skill 创建与迭代优化
 
-一个用来做 skill 的 skill。覆盖 skill 开发的完整生命周期：从需求澄清到草稿编写、测试用例设计、并行运行评估、定量打分、人工审查、迭代改进，最后还有一套 description 触发率的自动优化流程。
+一个用来做 [Claude Code](https://claude.com/claude-code) Skill 的 skill。覆盖 skill 开发的完整生命周期：从需求澄清到草稿编写、测试用例设计、并行运行评估、定量打分、人工审查、迭代改进，最后还有一套 description 触发率的自动优化流程。
 
 ## 技术原理
 
-整个插件只有一个 skill（`skill-creator`），但它内部集成了完整的工程化评估体系。
+整个插件只有一个 skill（`skill-creator`），但它内部集成了完整的工程化评估体系。配套有三个内部 Agent（grader、comparator、analyzer）和一组 Python 脚本，外加一个 `eval-viewer/` HTML 查看器。
 
 ### 核心循环
 
 skill-creator 的工作流是一个"写-测-评-改"的迭代循环：
 
 1. **澄清意图** —— 这个 skill 要做什么？什么时候触发？输出格式是什么？要不要设测试用例？
-2. **写草稿** —— 填 frontmatter（name、description）、写正文指令、规划 references/scripts/assets 目录
-3. **跑测试** —— 写 2-3 个真实测试 prompt，对每个 prompt 并行启动两个 subagent：一个带 skill 跑（with_skill），一个不带 skill 跑（without_skill/baseline）。同时 draft 定量断言
-4. **评估** —— grader agent 对每个 run 的输出做断言检查，aggregate_benchmark.py 汇总统计数据，generate_review.py 生成一个浏览器 HTML 查看器给用户看
+2. **写草稿** —— 填 frontmatter（YAML 元数据头：name、description）、写正文指令、规划 references/scripts/assets 目录
+3. **跑测试** —— 写 2-3 个真实测试 prompt（提示词），对每个 prompt 并行启动两个 subagent（子代理）：一个带 skill 跑（with_skill），一个不带 skill 跑（without_skill/baseline）。同时 draft 定量断言
+4. **评估** —— grader agent 对每个 run 的输出做断言检查，`aggregate_benchmark.py` 汇总统计数据，`eval-viewer/generate_review.py` 生成一个浏览器 HTML 查看器给用户看
 5. **用户反馈** —— 用户在查看器里逐条审查输出、写评论，提交后生成 feedback.json
 6. **改进 skill** —— 根据反馈修改 skill，重新跑测试，循环直到满意
 
@@ -58,6 +64,9 @@ skill-name-workspace/
 - `improve_description.py` —— 单次 description 改进
 - `quick_validate.py` —— 快速校验 skill 格式
 - `package_skill.py` —— 打包成 .skill 文件
+- `utils.py` —— 共享工具函数
+
+`eval-viewer/generate_review.py` 是独立的浏览器查看器生成脚本，模板在 `eval-viewer/viewer.html`。
 
 ### Description 优化
 

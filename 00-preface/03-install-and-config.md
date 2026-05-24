@@ -1,3 +1,9 @@
+---
+title: 插件的安装、配置与管理
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/DTtFwMelPiByDGkTQkJcAQpvnTc"
+last_synced: "2026-05-24T23:58:52+08:00"
+---
+
 # 插件的安装配置与管理
 
 ## 安装插件

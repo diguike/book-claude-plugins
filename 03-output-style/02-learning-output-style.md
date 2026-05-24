@@ -1,10 +1,16 @@
+---
+title: learning-output-style：交互式学习输出风格
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/IMp5wCfDwitqUVkqvcTc7O5onBf"
+last_synced: "2026-05-24T23:59:31+08:00"
+---
+
 # learning-output-style：交互式学习输出风格
 
 在 `explanatory-output-style` 的基础上更进一步——不只解释，还会在关键决策点停下来，要求用户自己写 5-10 行代码，把编码过程变成一个交互式学习体验。
 
 ## 技术原理
 
-实现方式与 `explanatory-output-style` 完全相同：一个 `SessionStart` hook 执行 `hooks-handlers/session-start.sh`，输出 JSON 把指令注入到 `additionalContext` 里。
+实现方式与 `explanatory-output-style` 完全相同：一个 `SessionStart` Hook（会话启动时触发）执行 `hooks-handlers/session-start.sh`，输出 JSON 把指令注入到 `additionalContext` 里。
 
 但注入的指令内容复杂得多，包含两大部分：
 
@@ -16,7 +22,7 @@
 - 错误处理策略选择
 - 算法实现选择
 - 数据结构选择
-- 影响用户体验的决策
+- 影响 UX（User Experience，用户体验）的决策
 - 设计模式和架构选择
 
 什么**不**应该让用户写？也列了 4 类：

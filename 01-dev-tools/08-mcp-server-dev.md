@@ -1,10 +1,16 @@
+---
+title: mcp-server-dev：MCP 服务器开发向导
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/KZ5ywfIGaikNjskpiotcyMYxn0B"
+last_synced: "2026-05-24T23:59:08+08:00"
+---
+
 # mcp-server-dev：MCP 服务器开发向导
 
-一句话：这是一个纯指令型插件，用三个 Skill 引导 Claude 帮你从零设计和搭建 MCP 服务器——从选型到部署，全程在对话里完成。
+一句话：这是一个纯指令型插件，用三个 Skill（技能）引导 Claude 帮你从零设计和搭建 MCP（Model Context Protocol，模型上下文协议，<https://modelcontextprotocol.io>）服务器——从选型到部署，全程在对话里完成。
 
 ## 技术原理
 
-mcp-server-dev 没有一行可执行代码。它的全部内容是三个 Skill（`build-mcp-server`、`build-mcp-app`、`build-mcpb`）和一批参考文档。当你在 Claude Code 里说"帮我建一个 MCP server"，`build-mcp-server` 这个入口 Skill 被触发，Claude 加载它的 SKILL.md 拿到一套结构化的引导流程，然后按阶段跟你对话。
+mcp-server-dev 没有一行可执行代码。它的全部内容是三个 Skill（`build-mcp-server`、`build-mcp-app`、`build-mcpb`）和一批参考文档。当你在 [Claude Code](https://claude.com/claude-code) 里说"帮我建一个 MCP server"，`build-mcp-server` 这个入口 Skill 被触发，Claude 加载它的 SKILL.md 拿到一套结构化的引导流程，然后按阶段跟你对话。
 
 三个 Skill 的分工：
 
@@ -19,7 +25,7 @@ SKILL.md 里的指令分为 5 个阶段（Phase）：
 1. **需求审问** —— 连接什么（云 API / 本地进程 / 硬件）、谁用、动作数量多少、需不需要中途用户交互、上游认证方式
 2. **推荐部署模型** —— 默认推远程 streamable-HTTP，有明确理由才推 MCPB 或 MCP app
 3. **选工具设计模式** —— 动作少于 15 个用一个工具对应一个动作；几十上百个动作用 search + execute 两把刀
-4. **选框架** —— TypeScript SDK（`@modelcontextprotocol/sdk`）或 Python FastMCP 3.x
+4. **选框架** —— TypeScript SDK（Software Development Kit，软件开发工具包）`@modelcontextprotocol/sdk` 或 Python FastMCP 3.x
 5. **脚手架生成和交接** —— 根据前面的决定，要么直接在当前会话里生成代码，要么交给 `build-mcp-app` 或 `build-mcpb`
 
 每个阶段还附带 references 目录下的专题文档：OAuth 认证流程（CIMD / DCR）、工具描述写法、Cloudflare Workers 部署、Widget 模板、manifest schema、elicitation 用法等等。这些文档在 Claude 需要细节时按需加载。

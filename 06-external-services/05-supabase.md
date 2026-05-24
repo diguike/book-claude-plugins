@@ -1,8 +1,16 @@
+---
+title: Supabase 插件
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/KPtNwYrRnicr14kz2zLc3Z9JnHe"
+last_synced: "2026-05-24T23:58:17+08:00"
+---
+
 # 6.5 Supabase
+
+> 这个插件已从官方 marketplace 仓库的 `external_plugins/` 目录迁移到独立的远程托管仓库（`github.com/supabase-community/supabase-plugin`），由 Supabase 社区维护。marketplace.json 中通过 URL source 指向该仓库，安装方式不变，本章内容仍然有效。
 
 ## 定位
 
-Supabase 官方 MCP 集成。直接在 Claude Code 里操作数据库、管理项目，跑 SQL 不用开 Dashboard。
+[Supabase](https://supabase.com) 官方 MCP 集成，BaaS（Backend as a Service，后端即服务）平台的标准对接方式。直接在 Claude Code 里操作数据库、管理项目，跑 SQL 不用开 Dashboard。
 
 ## 核心功能
 

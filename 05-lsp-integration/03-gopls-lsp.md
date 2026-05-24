@@ -1,6 +1,12 @@
+---
+title: gopls LSP
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/B9OCwC2VLiFnQvkFEmtcX4Ahnxg"
+last_synced: "2026-05-24T23:59:42+08:00"
+---
+
 # gopls LSP
 
-**语言服务器**：gopls（Go 官方语言服务器，读作"go please"）
+**语言服务器**：[gopls](https://github.com/golang/tools/tree/master/gopls)（Go 官方语言服务器，读作"go please"）
 
 **支持的扩展名**：`.go`
 

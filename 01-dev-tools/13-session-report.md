@@ -1,6 +1,12 @@
+---
+title: session-report：Claude Code 使用量的可视化分析报告
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/Dx5Iw1nMkivGH2kC1lCcyNZxnRc"
+last_synced: "2026-05-24T23:59:19+08:00"
+---
+
 # session-report：Claude Code 使用量的可视化分析报告
 
-一句话：session-report 扫描 `~/.claude/projects` 下的 JSONL 会话日志，生成一份自包含的 HTML 报告，展示 token 用量、缓存效率、子 Agent 开销、最贵的 prompt 等指标。
+一句话：session-report 扫描 `~/.claude/projects` 下的 JSONL 会话日志，生成一份自包含的 HTML 报告，展示 [Claude Code](https://claude.com/claude-code) 的 token（模型输入的最小单位）用量、缓存（cache）效率、子 Agent（subagent）开销、最贵的 prompt（提示词）等指标。
 
 ## 技术原理
 
@@ -8,7 +14,7 @@
 
 1. **`analyze-sessions.mjs`**（~876 行 Node.js 脚本）—— 扫描日志、统计数据、输出 JSON
 2. **`template.html`**（~569 行）—— 报告的交互式前端壳，包含排版、图表、排序表格的全部 JS/CSS
-3. **`SKILL.md`** —— 指导 Claude 怎么把两者组合成最终报告
+3. **`SKILL.md`**（Skill，技能）—— 指导 Claude 怎么把两者组合成最终报告
 
 工作流程：
 

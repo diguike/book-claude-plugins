@@ -1,10 +1,16 @@
+---
+title: math-olympiad：竞赛数学对抗验证求解器
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/IMcbwXu22iuIdGkAlp3cOeEDnTg"
+last_synced: "2026-05-24T23:59:35+08:00"
+---
+
 # math-olympiad：竞赛数学对抗验证求解器
 
-一个面向 IMO、Putnam、USAMO 等竞赛数学的求解 skill，核心特点是用对抗式验证（adversarial verification）来抓住自我验证发现不了的证明错误。整个系统比这个仓库里其他所有插件都复杂一个量级。
+一个面向 IMO（International Mathematical Olympiad，国际数学奥林匹克，<https://www.imo-official.org>）、Putnam、USAMO 等竞赛数学的求解 Skill，核心特点是用对抗式验证（Adversarial verification）来抓住自我验证发现不了的证明错误。整个系统比这个仓库里其他所有插件都复杂一个量级。
 
 ## 技术原理
 
-这是一个 **skill** 类型的插件，但它的 `SKILL.md` 不是简单的指导文档，而是一套完整的多 Agent 工作流规范，配合 7 个参考文档和 2 个 shell 脚本。
+这是一个 **Skill** 类型的插件，但它的 `SKILL.md` 不是简单的指导文档，而是一套完整的多 Agent（subagent）工作流规范，配合 7 个参考文档和 2 个 shell 脚本。
 
 ### 整体架构
 

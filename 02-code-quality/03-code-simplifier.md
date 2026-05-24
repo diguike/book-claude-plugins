@@ -1,10 +1,16 @@
+---
+title: code-simplifier：自动代码简化 Agent
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/EIIFwn5fii1ICnkPhsscXWEznTg"
+last_synced: "2026-05-24T23:59:25+08:00"
+---
+
 # code-simplifier：自动代码简化 Agent
 
-一个在你写完代码后自动介入，在不改变功能的前提下简化和打磨代码的 Agent 插件。
+一个在你写完代码后自动介入，在不改变功能的前提下简化和打磨代码的 Agent（subagent）插件。
 
 ## 技术原理
 
-插件结构极简：一个 `plugin.json` 描述文件 + 一个 `agents/code-simplifier.md` Agent 定义文件。没有 command，没有 hook，没有脚本。
+插件结构极简：一个 `plugin.json` 描述文件 + 一个 `agents/code-simplifier.md` Agent 定义文件。没有 command，没有 Hook，没有脚本。
 
 它注册的是一个名为 `code-simplifier` 的 Agent，模型指定为 `opus`。Agent 的触发时机写在 description 里——不是用户手动调用，而是 Claude 在完成一段编码任务后自动判断是否需要启动。description 里给了三个触发示例：实现新功能后、修完 bug 后、做完性能优化后。
 

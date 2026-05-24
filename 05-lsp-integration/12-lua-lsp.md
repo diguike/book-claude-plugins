@@ -1,6 +1,12 @@
+---
+title: Lua LSP
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/DfRGw7Iesi0ELxkYw4vcrwAfn9b"
+last_synced: "2026-05-25T00:00:00+08:00"
+---
+
 # Lua LSP
 
-**语言服务器**：lua-language-server（LuaLS，社区开发的主流 Lua 语言服务器）
+**语言服务器**：[lua-language-server](https://github.com/LuaLS/lua-language-server)（LuaLS，社区开发的主流 Lua 语言服务器）
 
 **支持的扩展名**：`.lua`
 

@@ -1,8 +1,14 @@
+---
+title: Telegram 插件
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/FsLjwjc2giXp7rkIcu7cevSLnLg"
+last_synced: "2026-05-25T00:00:20+08:00"
+---
+
 # 6.10 Telegram
 
 ## 定位
 
-Telegram bot 消息通道插件。和 Discord 插件同一类东西——把 Telegram bot 接入 Claude Code，消息双向桥接，带访问控制。
+[Telegram](https://telegram.org) bot 消息通道插件。和 Discord 插件同一类东西——把 Telegram bot 接入 Claude Code，消息双向桥接，带访问控制。
 
 ## 核心功能
 

@@ -1,16 +1,22 @@
+---
+title: claude-code-setup：项目自动化配置推荐器
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/NrumwaIt0i0qpFk8LPycbrgmnXc"
+last_synced: "2026-05-24T23:58:56+08:00"
+---
+
 # claude-code-setup：项目自动化配置推荐器
 
-分析你的代码仓库，推荐适合的 Claude Code 自动化方案——hooks、skills、MCP server、subagent、插件，每类给出 1-2 个最有价值的建议。
+分析你的代码仓库，推荐适合的 [Claude Code](https://claude.com/claude-code) 自动化方案——hook（钩子，挂载到 Claude Code 事件的脚本/prompt）、Skill（技能）、MCP（Model Context Protocol，模型上下文协议，<https://modelcontextprotocol.io>）server、subagent、插件，每类给出 1-2 个最有价值的建议。
 
 ## 技术原理
 
-这个插件只有一个组件：一个模型触发型 skill `claude-automation-recommender`。没有 slash command，没有 hooks，没有 agents。
+这个插件只有一个组件：一个模型触发型 Skill `claude-automation-recommender`。没有 slash command，没有 hook，没有 agent。
 
 触发机制靠 description 里的关键词匹配。当你对 Claude 说"帮我配置 Claude Code"、"推荐自动化方案"、"该用什么 hooks"之类的话，Claude 判断上下文匹配后，会把这个 skill 的完整内容加载进来。
 
 skill 本体是一份结构化的分析流程指令，分三个阶段执行：
 
-**Phase 1：代码库分析**。Claude 用 Bash、Glob、Grep 工具扫描项目：检查 package.json、pyproject.toml 等包管理文件确定技术栈；查看 .prettierrc、.eslintrc 等配置确定已有工具链；扫描 .env 文件、tests 目录、CI 配置等判断项目特征。
+**Phase 1：代码库分析**。Claude 用 Bash、Glob、Grep 工具扫描项目：检查 package.json、pyproject.toml 等包管理文件确定技术栈；查看 .prettierrc、.eslintrc 等配置确定已有工具链；扫描 .env 文件、tests 目录、CI（Continuous Integration，持续集成）配置等判断项目特征。
 
 **Phase 2：匹配推荐**。skill 内嵌了大量"检测信号 -> 推荐方案"的映射表。比如检测到 Prettier 配置就推荐 PostToolUse auto-format hook，检测到 React 依赖就推荐 Playwright MCP server。映射表按五个维度组织：
 
@@ -24,7 +30,7 @@ skill 本体是一份结构化的分析流程指令，分三个阶段执行：
 
 **Phase 3：生成报告**。按模板输出结构化报告，每个维度只推荐 1-2 项，避免信息过载。
 
-真正有意思的是 `references/` 目录下的五个参考文件。这些不是 skill 启动时就加载的，而是 Claude 在分析过程中按需读取。这就是所谓"渐进式披露"（progressive disclosure）——metadata 始终在上下文里（约 100 词），SKILL.md 主体在触发时加载（约 2000 词），references 只在需要细节时才读。这样控制了上下文窗口的消耗。
+真正有意思的是 `references/` 目录下的五个参考文件。这些不是 skill 启动时就加载的，而是 Claude 在分析过程中按需读取。这就是所谓"渐进式披露"（progressive disclosure）——metadata 始终在上下文里（约 100 词），SKILL.md 主体在触发时加载（约 2000 词），references 只在需要细节时才读。这样控制了上下文窗口的 token（模型输入的最小单位）消耗。
 
 ### 参考文件内容
 

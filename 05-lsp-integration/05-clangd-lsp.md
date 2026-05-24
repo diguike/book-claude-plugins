@@ -1,6 +1,12 @@
+---
+title: clangd LSP
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/LeKhw9TRmicDvkkboDrc1hHbnGf"
+last_synced: "2026-05-24T23:59:46+08:00"
+---
+
 # clangd LSP
 
-**语言服务器**：clangd（LLVM 项目的一部分）
+**语言服务器**：[clangd](https://clangd.llvm.org/)（LLVM 项目的一部分）
 
 **支持的扩展名**：`.c`、`.h`、`.cpp`、`.cc`、`.cxx`、`.hpp`、`.hxx`、`.C`、`.H`
 

@@ -1,12 +1,18 @@
+---
+title: Greptile 插件
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/IaZWwxaQEixHink7wxtcZm6Qntd"
+last_synced: "2026-05-25T00:00:25+08:00"
+---
+
 # 6.12 Greptile
 
 ## 定位
 
-AI 代码审查工具 Greptile 的 MCP 集成。在 Claude Code 里查看和处理 Greptile 对 PR 的审查意见。
+AI 代码审查工具 [Greptile](https://greptile.com) 的 MCP 集成。在 Claude Code 里查看和处理 Greptile 对 PR / MR 的审查意见，同时支持 GitHub 和 GitLab。
 
 ## 核心功能
 
-HTTP 类型远程 MCP 服务器，地址 `api.greptile.com/mcp`。
+HTTP 类型远程 MCP 服务器，地址 `api.greptile.com/mcp`，认证通过环境变量 `GREPTILE_API_KEY` 注入到 `Authorization: Bearer` 请求头。
 
 **PR 相关工具：**
 - `list_pull_requests` —— 列出 PR，支持按仓库、分支、作者、状态筛选

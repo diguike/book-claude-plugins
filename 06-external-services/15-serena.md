@@ -1,8 +1,14 @@
+---
+title: Serena 插件
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/BhaGw903fiElwzkmrF9cGpXunWb"
+last_synced: "2026-05-25T00:00:31+08:00"
+---
+
 # 6.15 Serena
 
 ## 定位
 
-Oraios 开发的语义级代码分析 MCP 服务器。通过 Language Server Protocol（LSP）提供代码理解、重构建议和代码库导航。比单纯的文本搜索更智能——它理解代码结构。
+Oraios 开发的 [Serena](https://github.com/oraios/serena) 语义级代码分析 MCP 服务器。通过 LSP（Language Server Protocol，语言服务器协议）提供代码理解、重构建议和代码库导航。比单纯的文本搜索更智能——它理解代码结构。
 
 ## 核心功能
 

@@ -1,6 +1,12 @@
+---
+title: Swift LSP
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/JRbmwWXaEijHAskfJTlcahsnnre"
+last_synced: "2026-05-24T23:59:58+08:00"
+---
+
 # Swift LSP
 
-**语言服务器**：SourceKit-LSP（Apple 官方，随 Swift 工具链分发）
+**语言服务器**：[SourceKit-LSP](https://github.com/apple/sourcekit-lsp)（Apple 官方，随 Swift 工具链分发）
 
 **支持的扩展名**：`.swift`
 

@@ -1,6 +1,12 @@
+---
+title: PHP LSP
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/K5AWwVTifiV5uwkMHNmcM42QnQd"
+last_synced: "2026-05-24T23:59:57+08:00"
+---
+
 # PHP LSP
 
-**语言服务器**：Intelephense（PHP 社区最流行的语言服务器）
+**语言服务器**：[Intelephense](https://intelephense.com/)（PHP 社区最流行的语言服务器）
 
 **支持的扩展名**：`.php`
 

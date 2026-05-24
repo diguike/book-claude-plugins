@@ -1,12 +1,18 @@
+---
+title: Laravel Boost 插件
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/WTk4wWSnliQfZkkekegcZGyRnSd"
+last_synced: "2026-05-25T00:00:27+08:00"
+---
+
 # 6.13 Laravel Boost
 
 ## 定位
 
-Laravel 开发辅助 MCP 服务器。从 Claude Code 里运行 Artisan 命令、操作 Eloquent、管理路由和 migration——直接和你的 Laravel 项目交互。
+[Laravel Boost](https://github.com/laravel/boost) 开发辅助 MCP 服务器。从 Claude Code 里运行 Artisan 命令、操作 Eloquent、管理路由和 migration——直接和你的 Laravel 项目交互。
 
 ## 核心功能
 
-本地 stdio 类型 MCP 服务器，启动方式是 `php artisan boost:mcp`。这意味着它跑在你的 Laravel 项目内部，作为一个 Artisan 命令存在。
+本地 stdio 类型 MCP 服务器，启动方式是 `php artisan boost:mcp`。它跑在你的 Laravel 项目内部，作为一个 Artisan 命令存在。
 
 可能提供的能力包括：
 
@@ -24,13 +30,13 @@ Laravel 开发辅助 MCP 服务器。从 Claude Code 里运行 Artisan 命令、
 
 前置条件：
 1. PHP 环境
-2. 一个 Laravel 项目（`artisan` 文件存在于当前目录）
-3. 需要先在 Laravel 项目里安装 `laravel-boost` 这个 Composer 包——否则 `artisan boost:mcp` 会报命令不存在
+2. 一个 Laravel 项目（`artisan` 文件存在于当前工作目录）
+3. 需要先在 Laravel 项目里安装 `laravel/boost` 这个 Composer 包——否则 `artisan boost:mcp` 会报命令不存在
 
-安装 Composer 包（在你的 Laravel 项目里）：
+安装 Composer 包（在你的 Laravel 项目里，开发依赖即可）：
 
 ```bash
-composer require laravel-boost/laravel-boost
+composer require laravel/boost --dev
 ```
 
 不需要额外的 API key。一切操作都在本地。

@@ -1,8 +1,14 @@
+---
+title: iMessage 插件
+feishu_url: "https://fivwvysqdz.feishu.cn/wiki/WeEEwSqInihk7UkkoK1cw1aBnMe"
+last_synced: "2026-05-25T00:00:22+08:00"
+---
+
 # 6.11 iMessage
 
 ## 定位
 
-把 iMessage 接入 Claude Code。直接读取 macOS 的 `chat.db` 数据库获取消息，通过 AppleScript 发送回复。不依赖外部服务器，纯本地运行。**仅限 macOS。**
+把 [iMessage](https://support.apple.com/messages) 接入 Claude Code。直接读取 macOS 的 `chat.db` 数据库获取消息，通过 AppleScript 发送回复。不依赖外部服务器，纯本地运行。**仅限 macOS。**
 
 ## 核心功能
 
